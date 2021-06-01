@@ -1,8 +1,65 @@
+  
 <!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>        
-        <script src="./Ejercicio4.js"></script><!--cambiar numero de ejercicio-->
-    </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio3</title>
+  <link rel="stylesheet" href="Ejercicio4.css" />
+</head>
+
+<body>
+  <div id="formulario">
+    <h2 id="titulo">Formulario registro</h2>
+    <form novalidate>
+      <div class="grupoform">
+        <label for="usuario">Usuario:<span>*</span></label>
+        <input id="usuario" type="text" required pattern="^[A-Z]([0-9a-zA-Z])*[0-9]$">
+      </div>
+      <div class="grupoform">
+        <label for="contraseña">Contraseña:<span>*</span></label>
+        <input id="contraseña" type="password" required minlength="8" maxlength="8"
+          pattern="^[0-9]([0-9a-zA-Z])*[A-Z]$">
+      </div>
+      <div class="grupoform">
+        <label for="repita_contraseña">Repita la contraseña:<span>*</span></label>
+        <input id="repita_contraseña" type="password" required minlength="8" maxlength="8">
+      </div>
+      <div class="grupoform">
+        <label for="correo">Email:<span>*</span></label>
+        <input id="correo" type="email" required>
+      </div>
+      <div class="grupoform">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" pattern="^[A-Z](\w|\W)*$">
+      </div>
+      <div class="grupoform">
+        <label for="apellidos">Apellidos:</label>
+        <input id="apellidos" type="text" pattern="^[A-Z](\w|\W)*$">
+      </div>
+      <div class="grupoform">
+        <label for="edad">Edad:</label>
+        <input id="edad" type="text" pattern="^\d\d?\d?$" maxlength="3">
+      </div>
+      <div class="grupoform">
+        <label for="telefono">Teléfono:<span>*</span></label>
+        <input id="telefono" type="text" required pattern="^(6|7|9)[0-9]{8}$">
+      </div>
+      <button id="boton">Registrarse</button>
+    </form>
+    <span id="errores">
+      <span id="usuario_error" class="error"></span>
+      <span id="contraseña_error" class="error"></span>
+      <span id="correo_error" class="error"></span>
+      <span id="nombre_error" class="error"></span>
+      <span id="apellidos_error" class="error"></span>
+      <span id="edad_error" class="error"></span>
+      <span id="telefono_error" class="error"></span>
+      <span id="repita_contraseña_error" class="error"></span>
+    </span>
+  </div>
+
+</body>
+<script src="Ejercicio4.js"></script>
+
 </html>
